@@ -6,6 +6,6 @@ metadata:
 spec:
   containers:
   - name: veg-container
-    image: vegetable-app
+    image: dalalappagariajithkumar/vegetable-app:latest
     ports:
     - containerPort: 3000
