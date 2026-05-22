@@ -7,12 +7,12 @@ metadata:
 spec:
   containers:
 
-  - name: vegetable-container
-    image: dalalappagariajithkumar/vegetable-app:latest
-    ports:
-    - containerPort: 3000
-
   - name: fitness-container
     image: dalalappagariajithkumar/fitness-app:latest
     ports:
     - containerPort: 5000
+
+  - name: ecommerce-container
+    image: dalalappagariajithkumar/ecommerce-app:latest
+    ports:
+    - containerPort: 3000
