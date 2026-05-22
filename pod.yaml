@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ajith-pod
+
+spec:
+  containers:
+  - name: veg-container
+    image: vegetable-app
+    ports:
+    - containerPort: 3000
