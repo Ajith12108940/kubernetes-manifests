@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: vegetable-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: vegetable
+
+  template:
+    metadata:
+      labels:
+        app: vegetable
+
+    spec:
+      containers:
+      - name: vegetable-container
+        image: dalalappagariajithkumar/vegetable-app:latest
+
+        ports:
+        - containerPort: 3000
+
+---
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: vegetable-service
+
+spec:
+  selector:
+    app: vegetable
+
+  ports:
+  - port: 80
+    targetPort: 3000
+
+  type: ClusterIP
